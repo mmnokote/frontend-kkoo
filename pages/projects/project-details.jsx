@@ -18,6 +18,7 @@ export async function getStaticProps({ locale }) {
       ...(await serverSideTranslations(locale, ["common"])),
     },
   };
+  cd;
 }
 
 export default Projects;
