@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.chakra-popover__arrow {
+    top: 1px !important;
+}

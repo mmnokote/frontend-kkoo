@@ -1,0 +1,74 @@
+{
+  "systems": [
+    {
+      "id": "1",
+      "name": "GWF",
+      "description": "",
+      "imageUrl": "/images/logos/gwf.png"
+    },
+    {
+      "id": "2",
+      "name": "PlanRep",
+      "description": "",
+      "imageUrl": "/images/logos/planrep.png"
+    },
+    {
+      "id": "3",
+      "name": "TAUSI",
+      "description": "",
+      "imageUrl": "/images/logos/tausi.png"
+    },
+    {
+      "id": "4",
+      "name": "ARES",
+      "description": "",
+      "imageUrl": "/images/logos/ares.png"
+    },
+
+    {
+      "id": "6",
+      "name": "FFARS",
+      "description": "",
+      "imageUrl": "/images/logos/ffars.png"
+    },
+
+    {
+      "id": "8",
+      "name": "GOTHOMIS",
+      "description": "",
+      "imageUrl": "/images/logos/gothomis.png"
+    },
+    {
+      "id": "9",
+      "name": "HelpDesk",
+      "description": "",
+      "imageUrl": "/images/logos/helpdesk.png"
+    },
+    {
+      "id": "10",
+      "name": "MMAMA",
+      "description": "",
+      "imageUrl": "/images/logos/mmama.png"
+    },
+    {
+      "id": "11",
+      "name": "Muungano",
+      "description": "",
+      "imageUrl": "/images/logos/muungano.png"
+    },
+
+    {
+      "id": "12",
+      "name": "TERMIS",
+      "description": "",
+      "imageUrl": "/images/logos/termis.png"
+    },
+
+    {
+      "id": "13",
+      "name": "BEMIS",
+      "description": "",
+      "imageUrl": "/images/logos/bemis.png"
+    }
+  ]
+}

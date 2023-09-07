@@ -1,0 +1,140 @@
+{
+  "items": [
+    {
+      "label": "Home",
+      "href": "/",
+      "hasChildren": false
+    },
+    {
+      "label": "Contact Us",
+      "href": "/contacts",
+      "hasChildren": false
+    },
+    {
+      "label": "About Us",
+      "hasChildren": true,
+      "children": [
+        {
+          "label": "Our History",
+          "subLabel": "Discover our History, learn what we do",
+          "href": "#"
+        },
+        {
+          "label": "Mission and Vision",
+          "subLabel": "Our vision and mission in serving our people",
+          "href": "#"
+        },
+        {
+          "label": "What we Do",
+          "subLabel": "PORALG primary objectives and miscellaneous",
+          "href": "#"
+        },
+        {
+          "label": "Customer care Agreement",
+          "subLabel": "Understanding the value of our people by serving them well",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "Administration",
+      "hasChildren": true,
+      "children": [
+        {
+          "label": "Organization Structure",
+          "subLabel": "Learn PORALG organization structure ",
+          "href": "#"
+        },
+        {
+          "label": "Departments & Units",
+          "subLabel": "What Departments and Units supporting PORALG",
+          "href": "#"
+        },
+        {
+          "label": "Our Institutions",
+          "subLabel": "Institutions operating under PORALG",
+          "href": "#"
+        },
+        {
+          "label": "Roles & Responsibilities",
+          "subLabel": "Roles, Objectives of various Departments and Units",
+          "href": "#"
+        }
+      ]
+    },
+
+    {
+      "label": "Projects & Programs",
+      "hasChildren": true,
+      "children": [
+        {
+          "label": "Education",
+          "subLabel": "Find all projects and programs related to Education",
+          "href": "#"
+        },
+        {
+          "label": "Water Projects",
+          "subLabel": "Water and sanitation Projects across Local Authoroties",
+          "href": "#"
+        },
+        {
+          "label": "Development Projects",
+          "subLabel": "An list of various sectoral development projects",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "Media Center",
+      "hasChildren": true,
+      "children": [
+        {
+          "label": "News & Events",
+          "subLabel": "All news and Events at PORALG ",
+          "href": "#"
+        },
+        {
+          "label": "Photo Gallery",
+          "subLabel": "What is happening at PORALG in Photos",
+          "href": "#"
+        },
+        {
+          "label": "Public Notices",
+          "subLabel": "Get all public notices and advertisements",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "Villages & Towns",
+      "href": "#",
+      "hasChildren": false
+    },
+    {
+      "label": "Document Center",
+      "hasChildren": true,
+      "children": [
+        {
+          "label": "Education Documents",
+          "subLabel": "Read and Download Documents related to Education",
+          "href": "#"
+        },
+        {
+          "label": "Health Documents",
+          "subLabel": "Read and Download documents related to Health",
+          "href": "#"
+        },
+        {
+          "label": "Building Plans",
+          "subLabel": "Various building plans schematics",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "label": "Dashboards",
+      "href": "#",
+      "hasChildren": false
+    }
+  ]
+}

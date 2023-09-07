@@ -1,0 +1,70 @@
+{
+  "header": {
+    "top": {
+      "Call Center": "Kituo Cha Huduma",
+      "Frequently Asked Questions": "Maswali ya Mara kwa Mara",
+      "Contact Us": "Wasiliana Nasi",
+      "Staff Mail": "Barua Pepe"
+    },
+    "name": {
+      "title": "Jamhuri ya Muungano wa Tanzania",
+      "subtitle": "Ofisi ya Rais - Tawala za Mikoa na Serikali za Mitaa",
+      "abbreviation": "Tamisemi"
+    },
+    "nav": {
+      "Home": "Mwanzo",
+      "Contact Us": "Wasiliana Nasi",
+      "Villages & Towns": "Vijiji & Mitaa",
+      "Dashboards": "Dashibodi",
+      "About Us": {
+        "label": "Kuhusu Sisi",
+        "children": {
+          "Our History": "Historia Yetu",
+          "Mission and Vision": "Maono na Dira Yetu",
+          "What We Do": "Nini Tunafanya?",
+          "Customer Care Agreement": "Mkataba Huduma kwa Wateja"
+        }
+      },
+      "Administration": {
+        "label": "Utawala",
+        "children": {
+          "Organization Structure": "Muundo wa Taasisi",
+          "Departments & Units": "Idara na Vitengo",
+          "Our Institutions": "Taasisi Zetu",
+          "Roles & Responsibilities": "Majukumu ya Vitengo na Idara"
+        }
+      }
+    }
+  },
+  "sections": {
+    "call center": {
+      "title": "Kituo Cha Huduma kwa Wateja",
+      "description": "Kama una maswali au tatizo, tafadhali tumia namba za bure kupiga zilipo hapa kuwafikia watoa huduma wetu."
+    },
+    "leadership": {
+      "Deputy Ministers": "Naibu Mawaziri",
+      "Deputy Secretaries": "Naibu Katibu Wakuu"
+    },
+    "testimony": {
+      "heading": "Uhuru wa Wateja wetu Kusema",
+      "description": "Tumekuwa tukifanya kazi na wanainchi wote kutoka maeneo mbalimbali nchini, Wengi wamefurahishwa na huduma zetu. Tunathamini maoni yenu."
+    },
+    "systems": {
+      "heading": "Ubunifu wa Kidigitali na Mifumo ya TEHAMA",
+      "description": "Kama Wizara mama, Tumejenga mifumo mbalimbali ya kidigitali inayotusaidia kutoa huduma bora na imara. Tunaendelea na ubunifu wa kidigitali ili kuhakikisha kuwa tuna mifumo imara na inayowasaidia wanainchi wetu na Serikali."
+    }
+  },
+  "pages": {
+    "dashboards": {
+      "Administration": "Dashibodi Utawala",
+      "Revenue": "Dashibodi Mapato",
+      "Performance": "Dashibodi Utendaji"
+    },
+    "about": {
+      "History": "Historia ya Taasisi",
+      "Mission and Vision": "Malengo na Maono",
+      "What we Do": "Nini Tunafanya",
+      "Customer Care Agreement": "Mkataba wa Huduma"
+    }
+  }
+}

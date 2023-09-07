@@ -1,0 +1,16 @@
+{
+  "sliders": [
+    {
+      "id": "101",
+      "title": "Tanzania Royal Tour",
+      "description": "The Royal Tour, the latest in a series of global television events, hosted by Peter Greenberg with the President of Tanzania Samia Suluhu Hassan as his very special guide. An epic journey through this remarkable country through the eyes of its leader. ",
+      "imageUrl": "/images/slider/utalii-01.jpg"
+    },
+    {
+      "id": "102",
+      "title": "Ujenzi wa Madarasa ",
+      "description": "Bunge la Jamhuri ya Muungano wa Tanzania limepitisha  bajeti ya Ofisi ya Rais Tawala za Mikoa na Serikali za Mitaa (TAMISEMI), Tume ya Utumishi wa Waalimu, Mikoa na Mamlaka za Serikali za Mitaa kwa mwaka wa Fedha 2023/2024 shilingi Trilioni  9.1",
+      "imageUrl": "/images/slider/slider-01.jpg"
+    }
+  ]
+}

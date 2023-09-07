@@ -1,0 +1,70 @@
+{
+  "header": {
+    "top": {
+      "Call Center": "Call Center",
+      "Frequently Asked Questions": "Frequently Asked Questions",
+      "Contact Us": "Contact Us",
+      "Staff Mail": "Staff Mail"
+    },
+    "name": {
+      "title": "The United Republic of Tanzania",
+      "subtitle": "President's Office - Regional Administration and Local Government",
+      "abbreviation": "PORALG"
+    },
+    "nav": {
+      "Home": "Home",
+      "Contact Us": "Contact Us",
+      "Villages & Towns": "Village & Towns",
+      "Dashboards": "Dashboards",
+      "About Us": {
+        "label": "About Us",
+        "children": {
+          "Our History": "Our History",
+          "Mission and Vision": "Mission and Vision",
+          "What We Do": "What We Do",
+          "Customer Care Agreement": "Customer Care Agreement"
+        }
+      },
+      "Administration": {
+        "label": "Administration",
+        "children": {
+          "Organization Structure": "Organization Structure",
+          "Departments & Units": "Departments & Units",
+          "Our Institutions": "Our Institutions",
+          "Roles & Responsibilities": "Roles & Responsibilities"
+        }
+      }
+    }
+  },
+  "sections": {
+    "call center": {
+      "title": "Customer Service Call Center",
+      "description": "If you have any enquiries, please use the given toll-free numbers to reach our active customer care agents "
+    },
+    "leadership": {
+      "Deputy Ministers": "Deputy Ministers",
+      "Deputy Secretaries": "Deputy Secretaries"
+    },
+    "testimony": {
+      "heading": "Our Customers Speak",
+      "description": "We have been working with our esteemed citizens across the country, many appreciates our services, we appreciate your feedback."
+    },
+    "systems": {
+      "heading": "Digital Innovations and Solutions",
+      "description": "We have developmed organization Informations systems that have helped us provide reliable and efficient Services. We continue to innovate digitally and ensure that we have systems that deliver quality results for our people."
+    }
+  },
+  "pages": {
+    "dashboards": {
+      "Administration": "Administration Dashboard",
+      "Revenue": "Revenue Dashboards",
+      "Performance": "Performance Dashboards"
+    },
+    "about": {
+      "History": "History",
+      "Mission and Vision": "Mission and Vision",
+      "What we Do": "What we Do",
+      "Customer Care Agreement": "Customer Care Agreement"
+    }
+  }
+}

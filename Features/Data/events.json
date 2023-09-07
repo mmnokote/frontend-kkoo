@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "author": "Yusuph H. Kajabukama",
+      "published": "3 days Ago",
+      "title": "Orodha ya waliopata vibali vya Uhamisho Septemba - Disemba 2022 (OR - TAMISEMI)",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed arcu tincidunt, auctor urna et, mollis ligula. Etiam at faucibus turpis. Aenean vel neque at erat pretium porta sit amet nec tortor. Praesent ut mollis sem. In hac habitasse platea dictumst."
+    },
+    {
+      "id": "2",
+      "author": "Yusuph H. Kajabukama",
+      "published": "3 days Ago",
+      "title": "Orodha ya Wanafunzi waliochaguliwa Kidato cha Kwanza Waliorudia Mtihani",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed arcu tincidunt, auctor urna et, mollis ligula. Etiam at faucibus turpis. Aenean vel neque at erat pretium porta sit amet nec tortor. Praesent ut mollis sem. In hac habitasse platea dictumst."
+    },
+    {
+      "id": "3",
+      "author": "Yusuph H. Kajabukama",
+      "published": "3 days Ago",
+      "title": "Orodha ya Waliopangwa kwenye Vituo vya Kazi Kada za Afya (Awamu ya Pili) Agosti 2022",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed arcu tincidunt, auctor urna et, mollis ligula. Etiam at faucibus turpis. Aenean vel neque at erat pretium porta sit amet nec tortor. Praesent ut mollis sem. In hac habitasse platea dictumst."
+    }
+  ]
+}

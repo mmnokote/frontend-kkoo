@@ -1,0 +1,54 @@
+{
+  "leaders": [
+    {
+      "name": "Hon. Abdallah Mchengerwa",
+      "imageUrl": "/images/leadership/mchengerwa.jpeg",
+      "title": "Minister of State",
+      "label": "Deputy Ministers",
+      "description": "Angellah Kairuki is a Tanzanian politician who currently serves as Minister of State, President’s Office (Regional Administration and Local Government). In this role, she oversees issues related to regional and local government administration.",
+      "heading": "Deputy Ministers",
+      "deputies": [
+        {
+          "name": "Hon. Deogratius J. Ndejembi",
+          "imageUrl": "/images/leadership/ndejembi.jpeg",
+          "title": "Deputy Minister of State - PORALG (Education)",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Semper quis lectus nulla at volutpat diam ut venenatis."
+        },
+        {
+          "name": "Hon. Dkt. Festo John Dugange",
+          "imageUrl": "/images/leadership/ndugange.jpeg",
+          "title": "Deputy Minister of State - PORALG(Health)",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Semper quis lectus nulla at volutpat diam ut venenatis."
+        }
+      ]
+    },
+    {
+      "name": "Ndg. Adolf H. Ndunguru",
+      "imageUrl": "/images/leadership/ndunguru.jpg",
+      "title": "Permanent Secretary",
+      "label": "Deputy Secretaries",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Semper quis lectus nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus quis varius quam quisque. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Erat imperdiet sed euismod nisi porta. Lectus vestibulum mattis ullamcorper velit.",
+      "heading": "Deputy Permanent Secretary",
+      "deputies": [
+        {
+          "name": "Ndg. Sospeter M. Mtwale",
+          "imageUrl": "/images/leadership/mtwale.jpeg",
+          "title": "Deputy Permanent Secretary",
+          "description": "Dolor morbi non arcu risus quis varius quam quisque. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Erat imperdiet sed euismod nisi porta. Lectus vestibulum mattis ullamcorper velit."
+        },
+        {
+          "name": "Dkt. Charles E. Msonde",
+          "imageUrl": "/images/leadership/msonde.jpeg",
+          "title": "Deputy Permanent Secretary - PORALG(Education)",
+          "description": "Dolor morbi non arcu risus quis varius quam quisque. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Erat imperdiet sed euismod nisi porta. Lectus vestibulum mattis ullamcorper velit."
+        },
+        {
+          "name": "Dkt. Wilson M. Charles",
+          "imageUrl": "/images/leadership/charles.jpeg",
+          "title": "Deputy Permanent Secretary - PORALG(Health)",
+          "description": "Dolor morbi non arcu risus quis varius quam quisque. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Erat imperdiet sed euismod nisi porta. Lectus vestibulum mattis ullamcorper velit."
+        }
+      ]
+    }
+  ]
+}

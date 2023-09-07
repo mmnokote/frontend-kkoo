@@ -1,0 +1,93 @@
+{
+  "stats": [
+    {
+      "id": "101",
+      "name": "2022 Census",
+      "description": "Number of people",
+      "value": 61741120
+    },
+    {
+      "id": "102",
+      "name": "2022 Census",
+      "description": "Tanzania Mainland",
+      "value": 59851347
+    },
+    {
+      "id": "103",
+      "name": "2022 Census",
+      "description": "Zanzibar",
+      "value": 1889773
+    },
+    {
+      "id": "104",
+      "name": "2022 Census",
+      "description": "Number of Women",
+      "value": 31687990
+    },
+    {
+      "id": "105",
+      "name": "2022 Census",
+      "description": "Number of Men",
+      "value": 30053130
+    },
+    {
+      "id": "3",
+      "name": "RA",
+      "description": "Regional Authorities",
+      "value": 27
+    },
+
+    {
+      "id": "2",
+      "name": "LGAs",
+      "description": "Local Government Authorities",
+      "value": 184
+    },
+
+    {
+      "id": "4",
+      "name": "Wards",
+      "description": "Number of Wards",
+      "value": 453
+    },
+
+    {
+      "id": "6",
+      "name": "Villages",
+      "description": "Number of Villages",
+      "value": 12890
+    },
+
+    {
+      "id": "8",
+      "name": "Towns",
+      "description": "Number of Towns",
+      "value": 14536
+    },
+    {
+      "id": "9",
+      "name": "IS",
+      "description": "Number of Information Systems",
+      "value": 45
+    },
+    {
+      "id": "10",
+      "name": "Primary Schools",
+      "description": "Number of Primary Schools",
+      "value": 5336
+    },
+    {
+      "id": "11",
+      "name": "Secondary Schools",
+      "description": "Number of Secondary Schools",
+      "value": 53365
+    },
+
+    {
+      "id": "12",
+      "name": "Population",
+      "description": "Number of Citizens",
+      "value": 6534666
+    }
+  ]
+}

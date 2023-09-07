@@ -1,0 +1,25 @@
+{
+  "videos": [
+    {
+      "id": "1",
+      "title": "Namna ya kutumia Mfumo wa Kubadili Tahasusi na Vyuo vya kati (SELFORM).",
+      "description": "Baada ya wanafunzi kuhitimu hulazimika kubadili tahsusi zao za awali kwa sababu mbalimbali, mfumo wa SELFORM hutumika kufanya zoezi hili ukiwa mahali popote duniani.",
+      "videoUrl": "tKNlh1Up4lY",
+      "category": "general"
+    },
+    {
+      "id": "2",
+      "title": "Mfumo wa m-mama na huduma za kuwasaidia akina mama na watoto Tanzania",
+      "description": "Mfumo wa M-MAMA ni mfumo wa kutoa huduma za usafiri wa dharura kwa akina mama wajawazito pamoja na watoto wachanga.",
+      "imageUrl": "Ooe6QWiCmo4",
+      "category": "general"
+    },
+    {
+      "id": "3",
+      "title": "Dr. Dugange abaini upotevu wa mapato kwa kutotumika kwa mfumo wa GOTHOMIS",
+      "description": "Mfumo wa GOTHOMIS ni mfumo kwa ajili ya usimamizi wa shughuli za kitabibu na taarifa za wagonjwa hospitalini, ikiwa ni pamoja na usimamizi wa rasilimali za madawa, vifaa tiba na kemikali",
+      "imageUrl": "0uuXeeIeg4Y",
+      "category": "general"
+    }
+  ]
+}
