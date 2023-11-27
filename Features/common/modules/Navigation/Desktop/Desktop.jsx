@@ -1,7 +1,7 @@
 import { ChevronDownIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { useTranslation } from 'next-i18next';
 import { ImArrowRight2 } from 'react-icons/im';
-
+import { useEffect, useState } from 'react';
 import {
   Box,
   Collapse,
@@ -22,6 +22,19 @@ import {
 
 const Desktop = () => {
   const { isOpen, onToggle } = useDisclosure();
+  const [navItems, setNavItems] = useState([]);
+
+  useEffect(() => {
+    // Fetch NAV_ITEMS from your API
+    fetch(`http://127.0.0.1:1337/api/menus?populate=*&filters[IsTopMenu][$eq]=true`)
+      .then((response) => response.json())
+      .then((data) => {
+        // Sort the data based on the 'order' field
+        const sortedNavItems = data.data.sort((a, b) => a.attributes.order - b.attributes.order);
+        setNavItems(sortedNavItems);
+      })
+      .catch((error) => console.error('Error fetching NAV_ITEMS:', error));
+  }, []);
 
   return (
     <Box maxWidth="1440px" margin="0 auto">
@@ -48,20 +61,21 @@ const Desktop = () => {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Flex display={{ base: 'none', md: 'flex' }}>
-            <DesktopNav />
+            <DesktopNav navItems={navItems} />
           </Flex>
         </Flex>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav navItems={navItems} />
       </Collapse>
     </Box>
   );
 };
+
 export default Desktop;
 
-const DesktopNav = () => {
+const DesktopNav = ({ navItems }) => {
   const linkColor = useColorModeValue('white', 'blue.500');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.600');
@@ -69,13 +83,13 @@ const DesktopNav = () => {
 
   return (
     <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map((item) => (
-        <Box key={item.label}>
+      {navItems.map((item) => (
+        <Box key={item.attributes.name}>
           <Popover trigger={'hover'} placement={'bottom-start'} arrowSize={20}>
             <PopoverTrigger mb="3rem">
               <Link
                 p={2}
-                href={item.href ?? '#'}
+                href={item.attributes.href ?? '#'}
                 fontSize={'lg'}
                 fontWeight={500}
                 color={linkColor}
@@ -84,11 +98,11 @@ const DesktopNav = () => {
                   color: linkHoverColor,
                 }}
               >
-                {item.label}
+                {item.attributes.name}
               </Link>
             </PopoverTrigger>
 
-            {item.children && (
+            {item.attributes.menus.data.length > 0 && (
               <PopoverContent
                 border={0}
                 boxShadow={'xl'}
@@ -100,8 +114,8 @@ const DesktopNav = () => {
                 <PopoverArrow bg={popoverContentBgColor} />
                 <PopoverBody>
                   <Stack>
-                    {item.children.map((child) => (
-                      <DesktopSubNav key={child.label} {...child} />
+                    {item.attributes.menus.data.map((child) => (
+                      <DesktopSubNav key={child.attributes.name} {...child.attributes} />
                     ))}
                   </Stack>
                 </PopoverBody>
@@ -114,7 +128,7 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ name, href, subLabel }) => {
   return (
     <Link
       href={href}
@@ -133,7 +147,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
             _groupHover={{ color: useColorModeValue('blue.500', 'blue.100') }}
             fontWeight={600}
           >
-            {label}
+            {name}
           </Text>
           <Text
             mt={1}
@@ -159,7 +173,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({ navItems }) => {
   return (
     <Box
       position="fixed"
@@ -167,15 +181,15 @@ const MobileNav = () => {
       bg={useColorModeValue('white', 'gray.800')}
     >
       <Stack p={4} display={{ md: 'none' }}>
-        {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
+        {navItems.map((navItem) => (
+          <MobileNavItem key={navItem.attributes.name} {...navItem.attributes} />
         ))}
       </Stack>
     </Box>
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
+const MobileNavItem = ({ name, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -194,7 +208,7 @@ const MobileNavItem = ({ label, children, href }) => {
           fontWeight={600}
           color={useColorModeValue('gray.600', 'gray.200')}
         >
-          {label}
+          {name}
         </Text>
         {children && (
           <Icon
@@ -217,9 +231,9 @@ const MobileNavItem = ({ label, children, href }) => {
           align={'start'}
         >
           {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
+            children.data.map((child) => (
+              <Link key={child.attributes.name} py={2} href={child.attributes.href}>
+                {child.attributes.name}
               </Link>
             ))}
         </Stack>
@@ -227,165 +241,3 @@ const MobileNavItem = ({ label, children, href }) => {
     </Stack>
   );
 };
-
-const NAV_ITEMS = [
-  {
-    label: 'Home',
-    href: '/',
-    hasChildren: false,
-  },
-  {
-    label: 'Contact Us',
-    href: '/contacts',
-    hasChildren: false,
-  },
-  {
-    label: 'About Us',
-    hasChildren: true,
-    children: [
-      {
-        label: 'Our History',
-        subLabel: 'Discover our History, learn what we do',
-        href: '/about/our-history',
-      },
-      {
-        label: 'Mission and Vision',
-        subLabel: 'Our vision and mission in serving our people',
-        href: '/about/mission-and-vision',
-      },
-      {
-        label: 'What we Do',
-        subLabel: 'PORALG primary objectives and miscellaneous',
-        href: '/about/what-we-do',
-      },
-      {
-        label: 'Customer care Agreement',
-        subLabel: 'Understanding the value of our people by serving them well',
-        href: '/about/customer-care-agreement',
-      },
-    ],
-  },
-  {
-    label: 'Administration',
-    hasChildren: true,
-    children: [
-      {
-        label: 'Organization Structure',
-        subLabel: 'Learn PORALG organization structure ',
-        href: '#',
-      },
-      {
-        label: 'Departments & Units',
-        subLabel: 'What Departments and Units supporting PORALG',
-        href: '#',
-      },
-      {
-        label: 'Our Institutions',
-        subLabel: 'Institutions operating under PORALG',
-        href: '#',
-      },
-      {
-        label: 'Roles & Responsibilities',
-        subLabel: 'Roles, Objectives of various Departments and Units',
-        href: '#',
-      },
-    ],
-  },
-
-  {
-    label: 'Projects & Programs',
-    hasChildren: true,
-    href: '/projects',
-    children: [
-      {
-        label: 'Education',
-        subLabel: 'Find all projects and programs related to Education',
-        href: '/projects/education-projects',
-      },
-      {
-        label: 'Water Projects',
-        subLabel: 'Water and sanitation Projects across Local Authoroties',
-        href: '/projects/water-projects',
-      },
-      {
-        label: 'Development Projects',
-        subLabel: 'An list of various sectoral development projects',
-        href: '/projects/development-projects',
-      },
-    ],
-  },
-  {
-    label: 'Media Center',
-    hasChildren: true,
-    children: [
-      {
-        label: 'News & Events',
-        subLabel: 'All news and Events at PORALG ',
-        href: '#',
-      },
-      {
-        label: 'Photo Gallery',
-        subLabel: 'What is happening at PORALG in Photos',
-        href: '#',
-      },
-      {
-        label: 'Public Notices',
-        subLabel: 'Get all public notices and advertisements',
-        href: '#',
-      },
-    ],
-  },
-  {
-    label: 'Villages & Towns',
-    href: '#',
-    hasChildren: false,
-  },
-  {
-    label: 'Document Center',
-    hasChildren: true,
-    children: [
-      {
-        label: 'Education Documents',
-        subLabel: 'Read and Download Documents related to Education',
-        href: '#',
-      },
-      {
-        label: 'Health Documents',
-        subLabel: 'Read and Download documents related to Health',
-        href: '#',
-      },
-      {
-        label: 'Building Plans',
-        subLabel: 'Various building plans schematics',
-        href: '#',
-      },
-    ],
-  },
-  {
-    label: 'Dashboards',
-    href: '/dashboards',
-    hasChildren: false,
-    children: [
-      {
-        label: 'Administrative',
-        subLabel: "Administrative Dashboard at President's Office",
-        href: '/dashboards/administration',
-      },
-      {
-        label: 'Revenue Collection',
-        subLabel: 'Revenue sources and collections',
-        href: '/dashboards/revenue-collection',
-      },
-      {
-        label: 'Performance',
-        subLabel: "Performance Dashboard at President's Office",
-        href: '/dashboards/performance',
-      },
-    ],
-  },
-  {
-    label: 'Blog',
-    href: '/blog',
-    hasChildren: false,
-  },
-];

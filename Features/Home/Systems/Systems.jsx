@@ -12,6 +12,7 @@ import {
   DrawerOverlay,
   Heading,
   Image,
+  Img,
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
@@ -77,8 +78,12 @@ const Systems = ({ systems }) => {
                   backgroundPosition="center"
                   backgroundSize="cover"
                   backgroundRepeat="no-repeat"
-                  backgroundImage={`url(${element.imageUrl})`}
+                  backgroundImage={`url(${element.attributes.logoUrl.data.attributes.formats.thumbnail.url})`}
                 ></Box>
+                
+                <Box>
+               
+            </Box>
               </Box>
             </SwiperSlide>
           ))}
@@ -96,16 +101,10 @@ const Systems = ({ systems }) => {
                 marginBottom="1rem"
                 color="blue.500"
               >
-                {current?.name}
+                {current?.attributes.title}
               </Heading>
               <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Consequat nisl vel pretium lectus quam id. Semper quis lectus
-                nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus
-                quis varius quam quisque. Massa ultricies mi quis hendrerit
-                dolor magna eget est lorem. Erat imperdiet sed euismod nisi
-                porta. Lectus vestibulum mattis ullamcorper velit.
+              {current?.attributes.description}
               </Text>
             </Box>
           </DrawerBody>

@@ -23,7 +23,7 @@ function History({ content }) {
               <Box
                 fontSize="17px"
                 lineHeight="tall"
-                dangerouslySetInnerHTML={{ __html: attributes.content }}
+                dangerouslySetInnerHTML={{ __html: attributes?.content }}
               ></Box>
             </Box>
             <Box></Box>

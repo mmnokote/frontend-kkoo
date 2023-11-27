@@ -34,10 +34,7 @@ function Statistics({ statistics }) {
           PORALG in Numbers
         </Heading>
         <Text size="lg" marginTop="0.5rem" color="gray.600">
-          Duis laoreet et erat quis facilisis. Donec aliquet nisl in est
-          venenatis, ut gravida diam vulputate, Duis laoreet et erat quis
-          facilisis. Donec aliquet nisl in est venenatis, ut gravida diam
-          vulputate.
+          Duis laoreet 
         </Text>
       </Box>
       <Swiper
@@ -76,14 +73,14 @@ export const StatCard = ({ stats }) => {
     >
       <CardHeader>
         <Heading size="md" color="blue.400">
-          {stats.name}
+          {stats.attributes?.title}
         </Heading>
         <Text size="sm" color="gray.500">
-          {stats.description}
+          {stats.attributes?.subtitle}
         </Text>
       </CardHeader>
       <CardBody>
-        <Heading size="xl">{stats.value.toLocaleString()}</Heading>
+        <Heading size="xl">{stats.attributes?.total.toLocaleString()}</Heading>
       </CardBody>
     </Card>
   );

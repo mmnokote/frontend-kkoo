@@ -4,7 +4,7 @@ const assetsBaseUrl = process.env.ASSETS_BASE_URL;
 
 export const imageReducer = (image) => {
   const fields = image.data.attributes;
-  console.log('---fields --->', fields);
+///mnokote
   return {
     url: `${assetsBaseUrl}${fields.url}`,
     alt: `${fields.caption}`,

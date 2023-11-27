@@ -22,15 +22,15 @@ const Event = ({ event }) => {
       rounded="md"
     >
       <Box as="time" dateTime="2021-01-15 15:30:00 +0000 UTC">
-        {event.published}
+      {event.attributes.createdAt}
       </Box>
 
       <Flex alignItems="flex-start" justifyContent="flex-start" gap={5} my="2">
         <RxCalendar size={60} />
-        <Heading size="md">{event.title}</Heading>
+        <Heading size="md">{event.attributes.title}</Heading>
       </Flex>
       <Text noOfLines={3} mb="3">
-        {event.content}
+      {event.attributes.content}
       </Text>
       <Box color="blue.400">
         <Heading size="sm">

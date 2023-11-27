@@ -14,7 +14,7 @@ const Featured = ({ featured }) => {
         position="relative"
         backgroundSize="cover"
         color="white"
-        backgroundImage={featured.imageUrl}
+        backgroundImage={featured.attributes.image.data.attributes.formats.large.url}
       >
         <Box
           position="absolute"
@@ -28,7 +28,7 @@ const Featured = ({ featured }) => {
           zIndex="1"
           bgGradient="linear(to-t, blackAlpha.600, transparent)"
         />
-        <Box position="absolute" left="0.5rem" top="0.5rem">
+        {/* <Box position="absolute" left="0.5rem" top="0.5rem">
           {featured.tags.map((item) => (
             <Tag
               key={item}
@@ -40,10 +40,10 @@ const Featured = ({ featured }) => {
               <TagLabel>{item}</TagLabel>
             </Tag>
           ))}
-        </Box>
+        </Box> */}
         <Box zIndex={3} paddingX="2rem" marginBottom="2rem">
           <Heading size="md" fontWeight="medium" noOfLines={2}>
-            {featured.heading}
+          {featured.attributes.title}
           </Heading>
         </Box>
       </Box>

@@ -43,7 +43,7 @@ export default function Home({
             }}
             gap={{ base: '0', lg: '10' }}
           >
-            <Leadership leadership={leadership} />
+            <Leadership leadership={leadership} /> 
             <Featured featured={featured} />
           </Box>
         </Box>
@@ -75,28 +75,34 @@ export async function getStaticProps({ locale }) {
   const sliders = await fetcher(`${process.env.API_URL}/sliders?populate=*`);
   const videos = await fetcher(`${process.env.API_URL}/videos`);
 
-  const { featured } = require('@/Features/Data/featured');
-  const { elements } = require('@/Features/Data/announcements');
+  // const { featured } = require('@/Features/Data/featured');
+  const featured  = await fetcher(`${process.env.API_URL}/trending-event?populate=*`);
+
+  const elements  = await fetcher(`${process.env.API_URL}/downloads?populate=*`);
   const { items } = require('@/Features/Data/systems');
   const { leaders } = require('@/Features/Data/leadership');
-  const { stats } = require('@/Features/Data/statistics');
-  const { events } = require('@/Features/Data/events');
-  const { systems } = require('@/Features/Data/systems');
+  const stats   = await fetcher(`${process.env.API_URL}/statistics?populate=*`);
+  const events  = await fetcher(`${process.env.API_URL}/features?populate=*`);
+  // const { systems } = require('@/Features/Data/systems');
+  const systems  = await fetcher(`${process.env.API_URL}/systems?populate=*`);
 
-  console.log('----test', data);
+
+
+  // console.log('----test test test', featured.data);
 
   return {
     props: {
       videos: videos.data,
       sliders: sliders.data,
       articles: data,
-      featured: featured,
-      announcements: elements,
-      systems: items,
+      featured: featured.data,
+      announcements: elements.data,
       leadership: leaders,
-      statistics: stats,
-      events: events,
-      systems: systems,
+      statistics: stats.data,
+      events: events.data,
+      systems: systems.data,
+      // systems: systems,
+
       ...(await serverSideTranslations(locale, ['common'])),
     },
     revalidate: 1,

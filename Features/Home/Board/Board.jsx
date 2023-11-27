@@ -65,7 +65,7 @@ const Board = ({ items, events, videos }) => {
             </Box>
             <Box w="100%">
               <Box
-                marginY="2rem"
+                marginY="2rem" 
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
@@ -102,11 +102,14 @@ const Board = ({ items, events, videos }) => {
                   All Downloads
                 </Button>
               </Box>
+              
               <Box>
-                {items.map((item, index) => (
-                  <Announcement key={index} {...item} />
-                ))}
+                {items &&
+                  items.map((item, index) => (
+                    <Announcement key={index} announcement={item} />
+                  ))}
               </Box>
+              
             </Box>
           </Flex>
         </Box>
@@ -117,7 +120,8 @@ const Board = ({ items, events, videos }) => {
 
 export default Board;
 
-export const Announcement = ({ title, content, published }) => {
+export const Announcement = ({ announcement }) => {
+  const fileUrl = announcement.attributes.file.data.attributes.url;
   return (
     <VStack spacing="0" marginBottom={5}>
       <Box
@@ -131,27 +135,29 @@ export const Announcement = ({ title, content, published }) => {
         <Flex alignItems="center" gap={5}>
           <ImFilePdf size={60} color="red" />
           <Heading size="md" fontWeight="500" noOfLines={2}>
-            {title}
+          {announcement.attributes.title}
           </Heading>
         </Flex>
         <Text pt="2" size="md" noOfLines={2}>
-          {content}
+        {announcement.attributes.content}
         </Text>
         <Box
-          marginTop={2}
-          display="flex"
-          flexDirection="row"
-          justifyContent="flex-start"
-          alignItems="center"
-          gap={5}
-          as="a"
-          color="blue.400"
-          href="#"
-          fontWeight="bold"
-        >
-          <Text>Download</Text>
-          <AiOutlineCloudDownload size="25" />
-        </Box>
+      marginTop={2}
+      display="flex"
+      flexDirection="row"
+      justifyContent="flex-start"
+      alignItems="center"
+      gap={5}
+      as="a"
+      color="blue.400"
+      href={fileUrl} // Set the href to the actual file URL
+      target="_blank" // Open the link in a new tab
+      rel="noopener noreferrer" // Recommended for security
+      fontWeight="bold"
+    >
+      <Text>Download</Text>
+      <AiOutlineCloudDownload size="25" />
+    </Box>
       </Box>
     </VStack>
   );
