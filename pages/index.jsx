@@ -79,8 +79,8 @@ export async function getStaticProps({ locale }) {
   const featured  = await fetcher(`${process.env.API_URL}/trending-event?populate=*`);
 
   const elements  = await fetcher(`${process.env.API_URL}/downloads?populate=*`);
-  const { items } = require('@/Features/Data/systems');
-  const { leaders } = require('@/Features/Data/leadership');
+  // const { leaders } = require('@/Features/Data/leadership');
+  const leaders = await fetcher(`${process.env.API_URL}/profiles?populate[profiles][populate][0]=image&filters[level][$eq]=1&populate=image&sort[0]=id:asc`);
   const stats   = await fetcher(`${process.env.API_URL}/statistics?populate=*`);
   const events  = await fetcher(`${process.env.API_URL}/features?populate=*`);
   // const { systems } = require('@/Features/Data/systems');
@@ -97,7 +97,7 @@ export async function getStaticProps({ locale }) {
       articles: data,
       featured: featured.data,
       announcements: elements.data,
-      leadership: leaders,
+      leadership: leaders.data,
       statistics: stats.data,
       events: events.data,
       systems: systems.data,

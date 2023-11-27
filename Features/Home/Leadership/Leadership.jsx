@@ -61,14 +61,14 @@ export const Leader = ({ leader }) => {
         <Image
           objectFit="contain"
           maxW={{ base: '100%', sm: '200px' }}
-          src={leader.imageUrl}
+          src={leader.attributes.image.data.attributes?.url}
           alt="Caffe Latte"
         />
 
         <Stack>
           <CardBody>
-            <Heading size="md">{leader.name}</Heading>
-            <Text noOfLines={3}>{leader.description}</Text>
+            <Heading size="md">{leader.attributes.name}</Heading>
+            <Text noOfLines={3}>{leader.attributes.description}</Text>
           </CardBody>
 
           <CardFooter display={'flex'} justifyContent={'flex-end'}>
@@ -77,7 +77,7 @@ export const Leader = ({ leader }) => {
               colorScheme="blue"
               onClick={() => handleDeputies(leader)}
             >
-              {t(`sections.leadership.${leader.label}`)}
+              {t(`sections.leadership.${leader.attributes.label}`)}
             </Button>
           </CardFooter>
         </Stack>
@@ -89,28 +89,28 @@ export const Leader = ({ leader }) => {
           <DrawerCloseButton />
           <DrawerBody padding="2rem">
             <Box>
-              <Image
+              {/* <Image
                 h={{ base: '50%', sm: '150px', lg: '160px' }}
                 w={{ base: '50%', sm: '150px', lg: '160px' }}
-                src={element?.imageUrl}
+                src={element.?.attributes.imageUrl}
                 alt={element?.name}
                 borderRadius="full"
-              />
+              /> */}
               <Box my={5}>
                 <Heading size="md" color="blue.500">
-                  {element?.name}
+                  {element?.attributes.name}
                 </Heading>
                 <Heading mt={2} size="sm">
-                  {element?.title}
+                  {element?.attributes.title}
                 </Heading>
                 <Text py="5">{element?.description}</Text>
               </Box>
             </Box>
             <Box marginY="2rem">
-              <Heading size="md">{element?.heading}</Heading>
+              <Heading size="md">{element?.attributes.heading}</Heading>
             </Box>
             <Box>
-              {element?.deputies.map((item, index) => (
+              {element?.attributes.profiles.data.map((item, index) => (
                 <Box key={index}>
                   <Box
                     display="flex"
@@ -131,22 +131,22 @@ export const Leader = ({ leader }) => {
                         lg: '100px',
                         md: '100px',
                       }}
-                      src={item?.imageUrl}
+                      src={item?.attributes.image.data.attributes.url}
                       alt={item?.name}
                       objectFit="cover"
                       borderRadius="full"
                     />
                     <Box>
                       <Heading size="md" color="blue.500">
-                        {item?.name}
+                        {item?.attributes.name}
                       </Heading>
                       <Heading mt={2} size="sm">
-                        {item.title}
+                        {item.attributes.title}
                       </Heading>
                     </Box>
                   </Box>
                   <Box>
-                    <Text py="5">{item?.description}</Text>
+                    <Text py="5">{item?.attributes.description}</Text>
                   </Box>
                 </Box>
               ))}
