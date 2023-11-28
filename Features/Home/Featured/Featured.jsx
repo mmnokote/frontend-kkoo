@@ -14,7 +14,7 @@ const Featured = ({ featured }) => {
         position="relative"
         backgroundSize="cover"
         color="white"
-        backgroundImage={featured.attributes.image.data.attributes.formats.large.url}
+        backgroundImage={featured.attributes.image.data.attributes.url}
       >
         <Box
           position="absolute"
