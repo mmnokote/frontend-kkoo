@@ -89,13 +89,13 @@ export const Leader = ({ leader }) => {
           <DrawerCloseButton />
           <DrawerBody padding="2rem">
             <Box>
-              {/* <Image
-                h={{ base: '50%', sm: '150px', lg: '160px' }}
-                w={{ base: '50%', sm: '150px', lg: '160px' }}
-                src={element.?.attributes.imageUrl}
-                alt={element?.name}
+              <Image
+                h={{ base: '70%', sm: '150px', lg: '160px' }}
+                w={{ base: '70%', sm: '150px', lg: '160px' }}
+                src={element?.attributes.image.data.attributes.url}
+                alt={element?.attributes.name}
                 borderRadius="full"
-              /> */}
+              />
               <Box my={5}>
                 <Heading size="md" color="blue.500">
                   {element?.attributes.name}

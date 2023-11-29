@@ -9,13 +9,14 @@ import {
 import { BsHeadset } from 'react-icons/bs';
 import { useTranslation } from 'next-i18next';
 
-function Callcenter() {
+// function Callcenter({item}) {
+  const Callcenter = ({ callcenters }) => {
   const { t } = useTranslation();
   const bg = useColorModeValue('blue.500', 'blue.600');
   return (
     <Box
       backgroundColor={bg}
-      backgroundImage={{ base: 'none', md: '/images/callcenter.png' }}
+      backgroundImage={callcenters?.attributes.image.data.attributes.url}
       backgroundSize="contain"
       backgroundRepeat="no-repeat"
       backgroundPosition="center right"
@@ -32,8 +33,8 @@ function Callcenter() {
         >
           <Box marginLeft="2rem" color="white">
             <Box>
-              <Heading mb={5}>{t('sections.call center.title')}</Heading>
-              <Text fontSize="xl">{t('sections.call center.description')}</Text>
+              <Heading mb={5}> {callcenters?.attributes.title}</Heading>
+              <Text fontSize="xl">{callcenters?.attributes.subtitle}</Text>
             </Box>
             <Stack direction="row" spacing={4} align="center" marginTop="2rem">
               <Button
@@ -43,7 +44,7 @@ function Callcenter() {
                 variant="solid"
                 size="lg"
               >
-                +255 478 210
+                {callcenters?.attributes.phone}
               </Button>
               <Button
                 _hover={{ color: 'blue.800' }}
@@ -52,7 +53,7 @@ function Callcenter() {
                 variant="outline"
                 size="lg"
               >
-                +255 478 210
+               {callcenters?.attributes.phone2}
               </Button>
             </Stack>
           </Box>
@@ -61,5 +62,4 @@ function Callcenter() {
     </Box>
   );
 }
-
 export default Callcenter;

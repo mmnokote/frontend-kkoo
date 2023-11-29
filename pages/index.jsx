@@ -20,6 +20,7 @@ export default function Home({
   articles,
   featured,
   announcements,
+  callcenters,
   events,
   leadership,
   statistics,
@@ -48,7 +49,7 @@ export default function Home({
           </Box>
         </Box>
         <Current articles={articles} />
-        <Callcenter />
+        <Callcenter callcenters={callcenters}  />
         <Board items={announcements} events={events} videos={videos} />
         <Statistics statistics={statistics} />
         <Systems systems={systems} />
@@ -85,10 +86,11 @@ export async function getStaticProps({ locale }) {
   const events  = await fetcher(`${process.env.API_URL}/features?populate=*`);
   // const { systems } = require('@/Features/Data/systems');
   const systems  = await fetcher(`${process.env.API_URL}/systems?populate=*`);
+  const callcenters  = await fetcher(`${process.env.API_URL}/call-center?populate=*`);
 
 
 
-  // console.log('----test test test', featured.data);
+  // console.log('----test test test', callcenters.data);
 
   return {
     props: {
@@ -101,6 +103,7 @@ export async function getStaticProps({ locale }) {
       statistics: stats.data,
       events: events.data,
       systems: systems.data,
+      callcenters: callcenters.data,
       // systems: systems,
 
       ...(await serverSideTranslations(locale, ['common'])),

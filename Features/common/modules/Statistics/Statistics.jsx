@@ -34,7 +34,7 @@ function Statistics({ statistics }) {
           PORALG in Numbers
         </Heading>
         <Text size="lg" marginTop="0.5rem" color="gray.600">
-          Duis laoreet 
+          Various statistics at PORALG 
         </Text>
       </Box>
       <Swiper
