@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+
 import {
   Box,
   Center,
@@ -17,6 +19,20 @@ import Social from "./Social/Social";
 
 function Footer() {
   const bg = useColorModeValue("gray.50", "gray.900");
+  const [importantLinks, setImportantLinks] = useState([]);
+
+  useEffect(() => {
+    // Fetch important links from your API
+    fetch("http://localhost:1337/api/imponrant-links")
+      .then((response) => response.json())
+      .then((data) => {
+        setImportantLinks(data.data);
+        console.log("Fetched Important Links:", data.data);
+      })
+      .catch((error) =>
+        console.error("Error fetching important links:", error)
+      );
+  }, []);
 
   return (
     <Box backgroundColor={bg} marginTop={"5rem"}>
@@ -27,7 +43,7 @@ function Footer() {
       >
         <SimpleGrid
           paddingTop="3rem"
-          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 1fr 1fr" }}
+          templateColumns={{ sm: "1fr 1fr", md: "1fr 1fr 1fr " }}
           spacing={8}
         >
           <Stack spacing={6}>
@@ -50,23 +66,23 @@ function Footer() {
 
           <Flex flexDirection="column" gap="0.5rem">
             <HeaderLink title="Important Links" />
-            {important.map((item) => (
-              <FooterLink key={item.name} {...item} />
+            {importantLinks.map((item) => (
+              <FooterLink key={item.id} {...item} />
             ))}
           </Flex>
 
-          <Flex flex={1} flexDirection="column" gap="0.5rem">
+          {/* <Flex flex={1} flexDirection="column" gap="0.5rem">
             <HeaderLink title="Administration" />
             {administration.map((item) => (
               <FooterLink key={item.name} {...item} />
             ))}
-          </Flex>
-          <Flex flex={1} flexDirection="column" gap="0.5rem">
+          </Flex> */}
+          {/* <Flex flex={1} flexDirection="column" gap="0.5rem">
             <HeaderLink title="Media Center" />
             {media.map((item) => (
               <FooterLink key={item.name} {...item} />
             ))}
-          </Flex>
+          </Flex> */}
         </SimpleGrid>
 
         <Box
@@ -86,15 +102,16 @@ function Footer() {
 
 export default Footer;
 
-export const FooterLink = ({ name, link }) => {
+export const FooterLink = (item) => {
   return (
     <Link
-      href={link}
+      href={item.attributes.link}
       role={"group"}
       display={"block"}
       py={1}
       rounded={"md"}
       _hover={{ bg: "transparent" }}
+      target="_blank"
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
@@ -105,7 +122,7 @@ export const FooterLink = ({ name, link }) => {
             _groupHover={{ color: useColorModeValue("blue.600", "blue.400") }}
             fontWeight={500}
           >
-            {name}
+            {item.attributes.name}
           </Text>
         </Box>
         <Flex

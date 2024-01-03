@@ -1,16 +1,38 @@
-export const important = [
-  { name: 'Ajira za Tamisemi', link: '/' },
-  { name: 'State House', link: '/' },
-  { name: 'Ministry of Finance', link: '/' },
-  { name: 'Ministry of Health', link: '/' },
-  { name: 'Ministry of Education', link: '/' },
-];
 
 export const about = [
-  { name: 'History', link: '/about-us' },
-  { name: 'Mission and Vision', link: '/mission-vision' },
-  { name: 'Leadership', link: '/leadership' },
-  { name: 'Customer Care', link: '/organization-structure' },
+  {
+    "id": 1,
+    "attributes": {
+      "name": "Mission and Vision",
+      "link": "/mission-vision",
+      "createdAt": "2023-12-13T10:19:20.970Z",
+      "updatedAt": "2023-12-13T10:19:21.840Z",
+      "publishedAt": "2023-12-13T10:19:21.835Z"
+    }
+  
+  },
+  {
+    "id": 1,
+    "attributes": {
+      "name": "Leadership",
+      "link": "/leadership",
+      "createdAt": "2023-12-13T10:19:20.970Z",
+      "updatedAt": "2023-12-13T10:19:21.840Z",
+      "publishedAt": "2023-12-13T10:19:21.835Z"
+    }
+  
+  },
+  {
+    "id": 1,
+    "attributes": {
+      "name": "Organization Structure",
+      "link": "/organization-structure",
+      "createdAt": "2023-12-13T10:19:20.970Z",
+      "updatedAt": "2023-12-13T10:19:21.840Z",
+      "publishedAt": "2023-12-13T10:19:21.835Z"
+    }
+  
+  }
 ];
 
 export const administration = [
