@@ -7,12 +7,12 @@ import {
   AccordionPanel,
   SimpleGrid,
   Heading,
-} from '@chakra-ui/react';
-import DefaultLayout from '@/Features/Layouts/Default/Default';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import CustomBreadcrumb from '@/Features/common/modules/Breadcrumb/Breadcrumb';
-import { fetcher } from '@/Features/lib/api';
+} from "@chakra-ui/react";
+import DefaultLayout from "@/Features/Layouts/Default/Default";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import CustomBreadcrumb from "@/Features/common/modules/Breadcrumb/Breadcrumb";
+import { fetcher } from "@/Features/lib/api";
 
 const FrequentlyAskedQuestions = ({ content }) => {
   const { t } = useTranslation();
@@ -21,19 +21,19 @@ const FrequentlyAskedQuestions = ({ content }) => {
       <CustomBreadcrumb current="Frequently Asked Question" />
       <Box margin="0 auto" maxWidth="1440px">
         <Box marginY={6} paddingX={3}>
-          <Heading size={'lg'}>Frequently Asked Questions</Heading>
+          <Heading size={"lg"}>Frequently Asked Questions</Heading>
         </Box>
         <Box
           display="flex"
-          flexDirection={{ base: 'column', lg: 'row' }}
+          flexDirection={{ base: "column", lg: "row" }}
           gap="10"
         >
           <Box
-            marginBottom={'3rem'}
-            maxWidth={{ base: '100vw', lg: '55vw' }}
-            paddingRight={{ base: '0', lg: '5rem' }}
+            marginBottom={"3rem"}
+            maxWidth={{ base: "100vw", lg: "55vw" }}
+            paddingRight={{ base: "0", lg: "5rem" }}
           >
-            <Accordion allowToggle width={'100%'}>
+            <Accordion allowToggle width={"100%"}>
               {content &&
                 content.map((item, index) => (
                   <AccordionItem key={index}>
@@ -45,8 +45,8 @@ const FrequentlyAskedQuestions = ({ content }) => {
                           as="span"
                           flex="1"
                           textAlign="left"
-                          fontWeight={'medium'}
-                          color={'blue.600'}
+                          fontWeight={"medium"}
+                          color={"blue.600"}
                         >
                           {item.attributes.question}
                         </Box>
@@ -60,7 +60,7 @@ const FrequentlyAskedQuestions = ({ content }) => {
                 ))}
             </Accordion>
           </Box>
-          <Box width={'45vw'}></Box>
+          <Box width={"45vw"}></Box>
         </Box>
       </Box>
     </DefaultLayout>
@@ -71,7 +71,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       content: faq.data,
-      ...(await serverSideTranslations(locale, ['common'])),
+      ...(await serverSideTranslations(locale, ["common"])),
     },
     revalidate: 1,
   };
