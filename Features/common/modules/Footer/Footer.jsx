@@ -23,11 +23,12 @@ function Footer() {
 
   useEffect(() => {
     // Fetch important links from your API
-    fetch("http://localhost:1337/api/imponrant-links")
+    fetch("http://196.192.73.27:8080/api/imponrant-links")
+      // fetch("http://localhost:1337/api/imponrant-links")
       .then((response) => response.json())
       .then((data) => {
         setImportantLinks(data.data);
-        console.log("Fetched Important Links:", data.data);
+        // console.log("Fetched Important Links:", data.data);
       })
       .catch((error) =>
         console.error("Error fetching important links:", error)
