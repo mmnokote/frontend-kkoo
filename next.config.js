@@ -6,7 +6,7 @@ module.exports = {
   swcMinify: true,
   i18n,
   images: {
-    domains: [`${process.env.ASSETS_BASE_URL}`],
+    domains: [process.env.ASSETS_BASE_URL],
   },
   async rewrites() {
     return [
@@ -26,7 +26,7 @@ module.exports = {
     ];
   },
   async serverMiddleware() {
-    const proxy = createProxyMiddleware('/uploads', {
+    const proxy = createProxyMiddleware({
       target: 'http://196.192.73.27:8080',
       changeOrigin: true,
       pathRewrite: { '^/uploads': '/' },
@@ -41,5 +41,3 @@ module.exports = {
     };
   },
 };
-
-
