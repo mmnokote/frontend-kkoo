@@ -6,13 +6,13 @@ module.exports = {
   swcMinify: true,
   i18n,
   images: {
-    domains: [`${process.env.ASSETS_BASE_URL}`],
+    domains: [process.env.ASSETS_BASE_URL],
   },
   async rewrites() {
     return [
       {
         source: '/uploads/:path*',
-        destination: 'http://localhost:1337/uploads/:path*', // Set your actual destination
+        destination: 'http://196.192.73.27:8080/uploads/:path*', // Set your actual destination
       },
     ];
   },
@@ -20,14 +20,14 @@ module.exports = {
     return [
       {
         source: '/uploads/:path*',
-        destination: 'http://localhost:1337/uploads/:path*', // Set your actual destination
+        destination: 'http://196.192.73.27:8080/uploads/:path*', // Set your actual destination
         permanent: false,
       },
     ];
   },
   async serverMiddleware() {
-    const proxy = createProxyMiddleware('/uploads', {
-      target: 'http://localhost:1337',
+    const proxy = createProxyMiddleware({
+      target: 'http://196.192.73.27:8080',
       changeOrigin: true,
       pathRewrite: { '^/uploads': '/' },
     });
@@ -41,5 +41,3 @@ module.exports = {
     };
   },
 };
-
-
