@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Breadcrumb,
   BreadcrumbItem,
   useColorModeValue,
   BreadcrumbLink,
-} from '@chakra-ui/react';
-import { BsArrowRight } from 'react-icons/bs';
+} from "@chakra-ui/react";
+import { BsArrowRight } from "react-icons/bs";
 
 function CustomBreadcrumb({ previous, current }) {
-  const bgColor = useColorModeValue('blue.100', 'gray.500');
+  const bgColor = useColorModeValue("blue.100", "gray.500");
   return (
     <Box backgroundColor={bgColor}>
       <Box
         maxWidth="1440px"
-        margin={'0 auto'}
-        display={'flex'}
-        alignItems={'center'}
+        margin={"0 auto"}
+        display={"flex"}
+        alignItems={"center"}
         padding="1rem"
       >
         <Breadcrumb
@@ -25,14 +25,14 @@ function CustomBreadcrumb({ previous, current }) {
           fontSize="sm"
         >
           <BreadcrumbItem>
-            <BreadcrumbLink color={previous && 'gray.500'} href="/">
+            <BreadcrumbLink color={previous && "gray.500"} href="/">
               Home
             </BreadcrumbLink>
           </BreadcrumbItem>
 
           {previous && (
             <BreadcrumbItem>
-              <BreadcrumbLink color={previous && 'gray.500'} href="/about">
+              <BreadcrumbLink color={previous && "gray.500"} href="/websites">
                 {previous}
               </BreadcrumbLink>
             </BreadcrumbItem>

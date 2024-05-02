@@ -1,12 +1,12 @@
-import { Box, useDisclosure } from '@chakra-ui/react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { Box, useDisclosure } from "@chakra-ui/react";
+import { AnimatePresence, motion } from "framer-motion";
 
-import Footer from '@/Features/common/modules/Footer/Footer';
-import Navigation from '@/Features/common/modules/Navigation/Navigation';
-import DialogTerms from '@/Features/Home/Terms/Terms';
-import { MessagesProvider } from '@/Features/Contexts/messages';
-import Chat from '@/Features/Chat/Chat';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Footer from "@/Features/common/modules/Footer/Footer";
+import Navigation from "@/Features/common/modules/Navigation/Navigation";
+import DialogTerms from "@/Features/Home/Terms/Terms";
+import { MessagesProvider } from "@/Features/Contexts/messages";
+import Chat from "@/Features/Chat/Chat";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const Default = ({ children, items }) => {
   const { isOpen, onOpen, onClose } = useDisclosure({ defaultIsOpen: false });
@@ -24,8 +24,8 @@ const Default = ({ children, items }) => {
           >
             <Navigation />
             <MessagesProvider>
-              <Box padding={{ base: '1rem', lg: '0px' }} position={'relative'}>
-                <Chat />
+              <Box padding={{ base: "1rem", lg: "0px" }} position={"relative"}>
+                {/* <Chat /> */}
                 {children}
               </Box>
             </MessagesProvider>

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Card,
@@ -5,17 +6,19 @@ import {
   Image,
   LinkBox,
   LinkOverlay,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-import { StarIcon } from '@chakra-ui/icons';
-import { articleReducer } from '@/Features/lib/reducers';
+import { StarIcon } from "@chakra-ui/icons";
+import { articleReducer } from "@/Features/lib/reducers";
 
 export const List = ({ article }) => {
+  console.log("Article:", article); // Logging the article object
+
   const item = articleReducer(article);
   return (
     <LinkBox>
       <Card
-        maxWidth={{ base: '100%', md: '280px', lg: '280px' }}
+        maxWidth={{ base: "100%", md: "280px", lg: "280px" }}
         maxHeight="340px"
         borderWidth="0px"
         borderRadius="none"
@@ -51,12 +54,12 @@ export const List = ({ article }) => {
 
               <Box display="flex" mt="2" alignItems="center">
                 {Array(5)
-                  .fill('')
+                  .fill("")
                   .map((_, i) => (
                     <StarIcon
                       marginLeft="1px"
                       key={i}
-                      color={i < item.reviews ? 'blue.500' : 'gray.300'}
+                      color={i < item.reviews ? "blue.500" : "gray.300"}
                     />
                   ))}
                 <Box as="span" ml="2" color="gray.600" fontSize="sm">

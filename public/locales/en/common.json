@@ -33,6 +33,15 @@
           "Our Institutions": "Our Institutions",
           "Roles & Responsibilities": "Roles & Responsibilities"
         }
+      },
+      "Websites": {
+        "label": "Websites",
+        "children": {
+          "Organization Structure": "Organization Structure",
+          "Departments & Units": "Departments & Units",
+          "Our Institutions": "Our Institutions",
+          "Roles & Responsibilities": "Roles & Responsibilities"
+        }
       }
     }
   },

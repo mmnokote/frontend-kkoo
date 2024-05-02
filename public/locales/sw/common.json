@@ -33,6 +33,10 @@
           "Our Institutions": "Taasisi Zetu",
           "Roles & Responsibilities": "Majukumu ya Vitengo na Idara"
         }
+      },
+      "Websites": {
+        "label": "Tovuti",
+        "children": {}
       }
     }
   },

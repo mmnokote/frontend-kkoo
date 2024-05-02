@@ -50,6 +50,8 @@
     "react-share": "^4.4.1",
     "react-slick": "^0.29.0",
     "react-textarea-autosize": "^8.4.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "swiper": "^9.1.1",
     "swr": "^2.1.5",
     "tailwind-merge": "^1.12.0",
