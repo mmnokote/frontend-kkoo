@@ -7,7 +7,7 @@ import { useTranslation } from "next-i18next";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
 
-function Publication({ content }) {
+function Presentation({ content }) {
   const { t } = useTranslation();
 
   // Check if content is null or undefined
@@ -23,9 +23,9 @@ function Publication({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.Publication.label")} />
+      <CustomBreadcrumb current={t("header.nav.Presentation.label")} />
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.Publication.label")}</Heading>
+        <Heading>{t("header.nav.Presentation.label")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>
@@ -45,4 +45,4 @@ export async function getStaticProps({ locale }) {
   };
 }
 
-export default Publication;
+export default Presentation;
