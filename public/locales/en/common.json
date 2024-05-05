@@ -43,6 +43,87 @@
           "Roles & Responsibilities": "Roles & Responsibilities"
         }
       }
+    },
+    "MissionVission": {
+      "label": "Dira na Dhima",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
+    },
+    "ResponsibilityWizara": {
+      "label": "Majukumu ya Wizara",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
+    },
+    "OrganizationStructure": {
+      "label": "Muundo wa Utawala",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
+    },
+    "Departiment": {
+      "label": "Idara na Vitengo",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
+    },
+    "Institution": {
+      "label": "Taasisi za Wizara",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
+    },
+    "Responsibility": {
+      "label": "Majukumu ya Idara na Vitengo",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
+    },
+    "Publication": {
+      "label": "Majarida",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
+    },
+    "Form": {
+      "label": "Fomu mbalimbali",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
+    },
+    "Presentation": {
+      "label": "Mawasilisho mbalimbali",
+      "children": {
+        "Organization Structure": "Organization Structure",
+        "Departments & Units": "Departments & Units",
+        "Our Institutions": "Our Institutions",
+        "Roles & Responsibilities": "Roles & Responsibilities"
+      }
     }
   },
   "sections": {
