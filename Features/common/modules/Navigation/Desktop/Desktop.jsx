@@ -28,7 +28,7 @@ const Desktop = () => {
     // Fetch NAV_ITEMS from your API
     // fetch(`http://127.0.0.1:1337/api/menus?populate=*&filters[IsTopMenu][$eq]=true`)
     fetch(
-      `http://196.192.73.27:8088/api/menus?populate=*&filters[IsTopMenu][$eq]=true`
+      `http://172.16.18.130:8080/api/menus?populate=*&filters[IsTopMenu][$eq]=true`
     )
       .then((response) => response.json())
       .then((data) => {
