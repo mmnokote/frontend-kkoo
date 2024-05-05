@@ -23,7 +23,7 @@ function Footer() {
 
   useEffect(() => {
     // Fetch important links from your API
-    fetch("http://196.192.73.27:8088/api/imponrant-links")
+    fetch("http://196.192.73.27:8080/api/imponrant-links")
       // fetch("http://localhost:1337/api/imponrant-links")
       .then((response) => response.json())
       .then((data) => {
