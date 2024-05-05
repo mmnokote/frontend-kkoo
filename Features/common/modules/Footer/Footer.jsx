@@ -59,14 +59,15 @@ function Footer() {
           </Stack>
 
           <Flex flexDirection="column" gap="0.5rem">
-            <HeaderLink title="About Us" />
+            <HeaderLink title="Viunganisho vya Haraka" />
             {about.map((item) => (
               <FooterLink key={item.name} {...item} />
             ))}
           </Flex>
 
           <Flex flexDirection="column" gap="0.5rem">
-            <HeaderLink title="Important Links" />
+            {/* <HeaderLink title="Important Links" /> */}
+            <HeaderLink title="Tovuti mbalimbali" />
             {importantLinks.map((item) => (
               <FooterLink key={item.id} {...item} />
             ))}

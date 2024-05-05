@@ -2,7 +2,7 @@ const path = require('path');
 
 /** @type import("next").I18NConfig */
 const i18n = {
-  defaultLocale: 'en',
+  defaultLocale: 'sw',
   locales: ['en', 'sw'],
   localeDetection: false,
 };
@@ -10,7 +10,7 @@ const i18n = {
 /** @type import("next-i18next").UserConfig */
 const next18nextConfig = {
   i18n,
-  fallbackLng: 'en',
+  fallbackLng: 'sw',
   keySeparator: '.',
   nsSeparator: ':',
   localePath: path.resolve('./public/locales'),

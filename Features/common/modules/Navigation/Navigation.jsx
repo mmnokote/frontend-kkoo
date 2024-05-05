@@ -5,36 +5,36 @@ import {
   Image,
   useColorModeValue,
   Link,
-} from '@chakra-ui/react';
-import { MdOutlineHelp, MdWifiCalling3 } from 'react-icons/md';
+} from "@chakra-ui/react";
+import { MdOutlineHelp, MdWifiCalling3 } from "react-icons/md";
 
-import { BsHeadset } from 'react-icons/bs';
-import { IoIosMail } from 'react-icons/io';
+import { BsHeadset } from "react-icons/bs";
+import { IoIosMail } from "react-icons/io";
 
-import LocaleSwitcher from '@/Features/common/Hooks/useLocale/Switcher';
-import { useTranslation } from 'next-i18next';
-import ThemeSwitch from '@/Features/theme/switch';
-import Desktop from './Desktop/Desktop';
+import LocaleSwitcher from "@/Features/common/Hooks/useLocale/Switcher";
+import { useTranslation } from "next-i18next";
+import ThemeSwitch from "@/Features/theme/switch";
+import Desktop from "./Desktop/Desktop";
 const iconSize = 20;
 
 const Navigation = () => {
-  const bg = useColorModeValue('white', 'gray.900');
-  const bgNav = useColorModeValue('blue.500', 'gray.700');
-  const { t } = useTranslation('');
+  const bg = useColorModeValue("white", "gray.900");
+  const bgNav = useColorModeValue("blue.500", "gray.700");
+  const { t } = useTranslation("");
   return (
     <>
       <Box
         display={{
-          base: 'none',
-          sm: 'none',
-          md: 'none',
-          lg: 'block',
+          base: "none",
+          sm: "none",
+          md: "none",
+          lg: "block",
         }}
       >
         <Box
           height="230px"
           display="flex"
-          flexDirection={'column'}
+          flexDirection={"column"}
           position="relative"
           justifyContent="space-between"
           alignItems="center"
@@ -45,10 +45,10 @@ const Navigation = () => {
             display="flex"
             alignItems="center"
             justifyContent="space-between"
-            backgroundColor={'transparent'}
+            backgroundColor={"transparent"}
             paddingX="2rem"
             height="50px"
-            width={'100%'}
+            width={"100%"}
             zIndex={5}
           >
             <Flex
@@ -71,7 +71,7 @@ const Navigation = () => {
           <Flex
             zIndex="2"
             width="100vw"
-            marginBottom={'3rem'}
+            marginBottom={"3rem"}
             flexDirection="row"
             alignItems="center"
             justifyContent="space-around"
@@ -83,10 +83,10 @@ const Navigation = () => {
               alt="Coat of Arms"
             />
             <Box color="white" textAlign="center">
-              <Heading mb={2} size="xl" fontWeight={'extrabold'}>
-                {t('header.name.title')}
+              <Heading mb={2} size="xl" fontWeight={"extrabold"}>
+                {t("header.name.title")}
               </Heading>
-              <Heading size="lg">{t('header.name.subtitle')}</Heading>
+              <Heading size="lg">{t("header.name.subtitle")}</Heading>
             </Box>
             <Box></Box>
           </Flex>
@@ -113,14 +113,14 @@ const Navigation = () => {
 export default Navigation;
 
 const ItemLink = ({ icon, title, link }) => {
-  const { t } = useTranslation('');
+  const { t } = useTranslation("");
   return (
     <Link
       href={link}
       fontWeight="semibold"
       color="white"
       fontSize="sm"
-      _hover={{ textDecoration: 'none', color: 'blue.500' }}
+      _hover={{ textDecoration: "none", color: "blue.500" }}
     >
       <Flex flexDirection="row" alignItems="center" gap="0.5rem">
         {icon}
@@ -132,23 +132,23 @@ const ItemLink = ({ icon, title, link }) => {
 
 export const NAV_ITEMS = [
   {
-    title: 'Call Center',
+    title: "Call Center",
     icon: <BsHeadset size={iconSize} />,
-    link: '/call-center',
+    link: "/call-center",
   },
   {
-    title: 'Contact Us',
+    title: "Contact Us",
     icon: <MdWifiCalling3 size={iconSize} />,
-    link: '/contacts',
+    link: "/contacts",
   },
   {
-    title: 'Frequently Asked Questions',
+    title: "Frequently Asked Questions",
     icon: <MdOutlineHelp size={iconSize} />,
-    link: '/frequently-asked-questions',
+    link: "/frequently-asked-questions",
   },
   {
-    title: 'Staff Mail',
+    title: "Staff Mail",
     icon: <IoIosMail size={iconSize} />,
-    link: '/staff-mail',
+    link: "#",
   },
 ];

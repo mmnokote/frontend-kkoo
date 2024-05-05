@@ -1,7 +1,7 @@
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import {
   Box,
@@ -11,18 +11,18 @@ import {
   Heading,
   Text,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { Autoplay, Navigation, Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+} from "@chakra-ui/react";
+import { Autoplay, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import useIsDesktop from '../../Hooks/useDesktop/useIsDesktop';
+import useIsDesktop from "../../Hooks/useDesktop/useIsDesktop";
 
 function Statistics({ statistics }) {
   const { isDesktop } = useIsDesktop();
   return (
     <Box maxWidth="1440px" margin="0 auto" paddingY="2rem">
       <Box
-        width={{ base: '100%', sm: '100%', md: '3xl' }}
+        width={{ base: "100%", sm: "100%", md: "3xl" }}
         margin="0 auto"
         display="relative"
         position="flex"
@@ -31,10 +31,11 @@ function Statistics({ statistics }) {
         marginBottom="1rem"
       >
         <Heading size="lg" color="blue.500">
-          PORALG in Numbers
+          Takwimu na TAMISEMI
         </Heading>
         <Text size="lg" marginTop="0.5rem" color="gray.600">
-          Various statistics at PORALG 
+          {/* Various statistics at PORALG  */}
+          Takwimu Mbalimbali zinazohusu TAMISEMI
         </Text>
       </Box>
       <Swiper
@@ -62,12 +63,12 @@ function Statistics({ statistics }) {
 export default Statistics;
 
 export const StatCard = ({ stats }) => {
-  const bg = useColorModeValue('white', 'gray.700');
+  const bg = useColorModeValue("white", "gray.700");
 
   return (
     <Card
       variant="outline"
-      _hover={{ backgroundColor: 'blackAlpha.100' }}
+      _hover={{ backgroundColor: "blackAlpha.100" }}
       marginBottom="2rem"
       marginX="1rem"
     >
