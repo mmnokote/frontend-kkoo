@@ -23,9 +23,11 @@ function Institution({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.Institution.label")} />
+      {/* <CustomBreadcrumb current={t("header.nav.Institution.label")} /> */}
+      <CustomBreadcrumb current={t("Taasisi za TAMISEMI")} />
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.Institution.label")}</Heading>
+        {/* <Heading>{t("header.nav.Institution.label")}</Heading> */}
+        <Heading>{t("Taasisi za TAMISEMI")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>

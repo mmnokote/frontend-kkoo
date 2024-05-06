@@ -23,9 +23,11 @@ function MissionVission({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.MissionVission.label")} />
+      <CustomBreadcrumb current={t("Dhima na Dira")} />
+      {/* <CustomBreadcrumb current={t("header.nav.MissionVission.label")} /> */}
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.MissionVission.label")}</Heading>
+        {/* <Heading>{t("header.nav.MissionVission.label")}</Heading> */}
+        <Heading>{t("Dhima na Dira")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>

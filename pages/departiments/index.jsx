@@ -23,9 +23,11 @@ function Departiment({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.Departiment.label")} />
+      {/* <CustomBreadcrumb current={t("header.nav.Departiment.label")} /> */}
+      <CustomBreadcrumb current={t("Idara na Vitengo")} />
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.Departiment.label")}</Heading>
+        {/* <Heading>{t("header.nav.Departiment.label")}</Heading> */}
+        <Heading>{t("Idara na Vitengo")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>

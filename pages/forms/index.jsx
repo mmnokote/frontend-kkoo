@@ -23,9 +23,11 @@ function Form({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.Form.label")} />
+      {/* <CustomBreadcrumb current={t("header.nav.Form.label")} /> */}
+      <CustomBreadcrumb current={t("Fomu mbali mbali")} />
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.Form.label")}</Heading>
+        {/* <Heading>{t("header.nav.Form.label")}</Heading> */}
+        <Heading>{t("Fomu mbali mbali")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>

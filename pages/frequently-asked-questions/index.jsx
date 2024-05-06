@@ -18,10 +18,12 @@ const FrequentlyAskedQuestions = ({ content }) => {
   const { t } = useTranslation();
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current="Frequently Asked Question" />
+      <CustomBreadcrumb current="Maswali ya Mara kwa Mara" />
+      {/* <CustomBreadcrumb current="Frequently Asked Question" /> */}
       <Box margin="0 auto" maxWidth="1440px">
         <Box marginY={6} paddingX={3}>
-          <Heading size={"lg"}>Frequently Asked Questions</Heading>
+          {/* <Heading size={"lg"}>Frequently Asked Questions</Heading> */}
+          <Heading size={"lg"}>Maswali ya Mara kwa Mara</Heading>
         </Box>
         <Box
           display="flex"

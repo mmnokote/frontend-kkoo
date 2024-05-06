@@ -23,9 +23,11 @@ function Responsibility({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.Responsibility.label")} />
+      {/* <CustomBreadcrumb current={t("header.nav.Responsibility.label")} /> */}
+      <CustomBreadcrumb current={t("Majukumu ya Idara na Vitengo")} />
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.Responsibility.label")}</Heading>
+        {/* <Heading>{t("header.nav.Responsibility.label")}</Heading> */}
+        <Heading>{t("Majukumu ya Idara na Vitengo")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>

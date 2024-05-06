@@ -23,9 +23,11 @@ function CustomerCare({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.CustomerCare.label")} />
+      {/* <CustomBreadcrumb current={t("header.nav.CustomerCare.label")} /> */}
+      <CustomBreadcrumb current={t("Huduma kwa Wateja")} />
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.CustomerCare.label")}</Heading>
+        {/* <Heading>{t("header.nav.CustomerCare.label")}</Heading> */}
+        <Heading>{t("Huduma kwa Wateja")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>

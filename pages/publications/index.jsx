@@ -36,9 +36,11 @@ function Publication({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.Publication.label")} />
+      {/* <CustomBreadcrumb current={t("header.nav.Publication.label")} /> */}
+      <CustomBreadcrumb current={t("Majarida")} />
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.Publication.label")}</Heading>
+        {/* <Heading>{t("header.nav.Publication.label")}</Heading> */}
+        <Heading>{t("Majarida")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>

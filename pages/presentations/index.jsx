@@ -23,9 +23,11 @@ function Presentation({ content }) {
 
   return (
     <DefaultLayout>
-      <CustomBreadcrumb current={t("header.nav.Presentation.label")} />
+      {/* <CustomBreadcrumb current={t("header.nav.Presentation.label")} /> */}
+      <CustomBreadcrumb current={t("Mawasilisho")} />
       <Box maxWidth="1440px" margin="0 auto">
-        <Heading>{t("header.nav.Presentation.label")}</Heading>
+        {/* <Heading>{t("header.nav.Presentation.label")}</Heading> */}
+        <Heading>{t("Mawasilisho")}</Heading>
         <Box dangerouslySetInnerHTML={{ __html: htmlContent }}></Box>
       </Box>
     </DefaultLayout>
